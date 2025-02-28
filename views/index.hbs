@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="relative.css">
+</head>
+<style> 
+input:focus {
+ background-color: yellow;
+}
+select:focus { 
+ background-color: yellow;
+}
+body {
+    background-color: aqua;
+    text-align: center;
+}
+#reason {
+  width: 200px;
+  height: 100px;
+}
+</style>
+<body>
+  <h1>{{message}}</h1>
+<form action="/submit" method="post" id="myForm">
+
+  <label for="name">Full name:</label>
+  <input type="text" id="name" name="nah" onblur="blurFunction()" required>
+<br>
+<br>
+  <label for="studentId">Student ID:</label>
+  <input type="number" id="studentId" name="studentId" onblur="blurFunction2()" required>
+<br>
+<br>
+  <label for="birth">Birthday:</label>
+  <input type="date" id="birth" name="birth" onblur="blurFunction3()" required>
+<br>
+<br>
+  <label for="eMail">Email Address:</label>
+  <input type="email" id="eMail" name="eMail" onblur="blurFunction4()" required>
+<br>
+<br>
+  <label for="num">Mobile Phone:</label>
+  <input type="text" id="num" name="num" onblur="blurFunction5()" required>
+<br>
+<br>
+  <label for="gL">Grade Level:</label>
+  <br>
+    <select id="gL" name="gL" required>
+        <option value="Enter a grade">Enter a grade</option>
+        <option value="Grade 7">Grade 7</option>
+        <option value="Grade 8">Grade 8</option>
+        <option value="Grade 9">Grade 9</option>
+        <option value="Grade 10">Grade 10</option>
+        <option value="Grade 11">Grade 11</option>
+        <option value="Grade 12">Grade 12</option>
+    </select>
+<br>
+<br>
+  <label for="Choose if you are an Extern or Intern">Choose if you are an Extern or Intern</label>
+  <br>
+    <label>
+        <input type="radio" name="place" value="Intern" required> Intern
+    </label>
+<br>
+    <label>
+        <input type="radio" name="place" value="Extern" required> Extern
+    </label>
+<br>
+<br>
+  <label for="club">Club:</label>
+  <br>
+    <select id="club" name="club" required>
+        <option value="Enter Club">Enter Club</option>
+        <option value="Swimming Club">Swimming Club</option>
+        <option value="Book Club">Book Club</option>
+        <option value="Glee Club">Glee Club</option>
+        <option value="Dance Club">Dance Club</option>
+        <option value="Karate Club">Karate Club</option>
+        <option value="Cooking Club">Cooking Club</option>
+    </select>
+<br>
+<br>
+  <label for="reason">Reason for joining:</label>
+  <br>
+  <input type="text" id="reason" name="reason" onblur="blurFunction6()" required>
+<br>
+<br>
+
+
+  <button type="submit" onclick="return confirmSubmission()">Submit</button>
+  <button type="reset" onclick="return confirmReset()">Reset</button>
+
+
+<script>
+    function confirmSubmission() {
+  let userConfirmed = confirm("Are you sure you want to submit the form?");
+  return userConfirmed;
+
+}
+
+function confirmReset() {
+  let userConfirmed = confirm("Are you sure you want to reset the form?");
+
+  return userConfirmed;
+}
+
+function blurFunction() {
+   document.getElementById("name").style.fontFamily = "'Courier New', Courier, monospace";
+   document.getElementById("name").style.fontWeight = "bolder";
+   document.getElementById("name").style.color = "red";
+  }
+
+function blurFunction2() {
+   document.getElementById("studentId").style.fontFamily = "'Courier New', Courier, monospace";
+   document.getElementById("studentId").style.fontWeight = "bold";
+  }
+
+function blurFunction3() {
+   document.getElementById("birth").style.fontFamily = "'Courier New', Courier, monospace";
+   document.getElementById("birth").style.fontWeight = "bold";
+  }
+
+function blurFunction4() {
+   document.getElementById("eMail").style.fontFamily = "'Courier New', Courier, monospace";
+   document.getElementById("eMail").style.fontWeight = "bold";
+  }
+
+function blurFunction5() {
+   document.getElementById("num").style.fontFamily = "'Courier New', Courier, monospace";
+   document.getElementById("num").style.fontWeight = "bolder";
+   document.getElementById("num").style.color = "red";
+  }
+
+function blurFunction6() {
+   document.getElementById("reason").style.fontFamily = "'Courier New', Courier, monospace";
+   document.getElementById("reason").style.fontWeight = "bold";
+}
+   </script>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/*Note that the css was not working in the external css thus I tried
+to put it in a internal css, and when I did that it worked. Thus I have compiled all my css 
+here but the actual css is inline in the html*/
+
+input:focus {
+    background-color: yellow;
+   }
+   
+select:focus {
+    background-color: yellow;
+   }
+
+
+body {
+    background-color: aqua;
+    text-align: center;
+}
+
+#reason {
+    width: 200px;
+    height: 100px;
+  }
+
+/*RESULT CSS*/
+
+body {
+    background-color: aqua;
+    text-align: center;
+}
+
+
+
+
+
+
+
